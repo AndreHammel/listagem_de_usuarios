@@ -29,11 +29,11 @@ export function makeServer() {
       server.createList('user', 10)
     },
     routes() {
-      this.namespace = 'v1';   //! /api/users
+      this.namespace = 'api';   //! /api/users
       this.timing = 750;        //! delay
       this.get('/users');
       this.post('/users');
-      //this.namespace = '';
+      this.namespace = '';
       this.passthrough();
     }
   })
